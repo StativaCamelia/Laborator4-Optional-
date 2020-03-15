@@ -8,6 +8,11 @@ public class Problem<E1, E2> {
 
     }
 
+    /**
+     *
+     * @param listOne: o partitia cu elementele de un anume tip cu preferinte pentru elementele din listTwo
+     * @param listTwo: o partitie cu elementele de un anume tip cu preferinte pentru elementele din listOne
+     */
     public Problem(Partition<E1, E2> listOne, Partition<E2, E1> listTwo)
     {
         for(Element<E1, E2> e1: listOne.getSetOfElements())

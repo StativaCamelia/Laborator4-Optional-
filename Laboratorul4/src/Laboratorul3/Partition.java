@@ -24,6 +24,7 @@ public class Partition<E1, E2>{
         this.setOfElements = elementsList;
     }
 
+
     public void addToPartition(Element<E1, E2> newElement){
        setOfElements.add(newElement);
     }

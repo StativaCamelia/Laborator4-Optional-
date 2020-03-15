@@ -29,6 +29,10 @@ public class Element<E1, E2>{
         return preferences;
     }
 
+    /**
+     * Adauga un element in lista de preferinte a altui element
+     * @param: elementul nou care trebuie adaugat la partitia de preferinte a altului elemet
+     */
     public void addPreference(Element<E2, E1> e){
         preferences.addToPartition(e);
     }
@@ -37,6 +41,12 @@ public class Element<E1, E2>{
         System.out.println(preferences.toString());
     }
 
+    /**
+     * Fiind dat un element de un tip se cauta indexul acestuia in lista de preferinte a celuilalt tip de element implicat in problema
+     * Daca elementul nu este gasit se returneaza dimensiunea preferintelor + 1 pentru a semnaliza ca nu se aflat in aceasta lista
+     * @param:  element pentru care incerc sa obtin pozitia in lista de preferinte
+     * @return index-ul elementului in lista de preferinte a altui element
+     */
     public int getPositionInPreferences(Element<E2, E1> elem){
         int i = 0;
         for(Element<E2, E1> elInd: this.preferences.getSetOfElements()){
